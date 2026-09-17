@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://camel.apache.org/cxf/jaxws/provider" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:tns="http://camel.apache.org/cxf/jaxws/provider" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:ns1="http://cxf.component.camel.apache.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+    <wsdl:types>
+        <xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://cxf.component.camel.apache.org/" xmlns="http://cxf.component.camel.apache.org/" xmlns:tns="http://camel.apache.org/cxf/jaxws/provider" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+          <xsd:element name="SFBaseoilInvReq">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="Detail">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="Action" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="CreatedDate" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="DeletionIndicator" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="SFID" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="Destination_Location" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="Hydrocarbon_Amount" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="Invoice_Amount" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="Invoice_Number" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="Order" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="PO_Number" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="Order_ID" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="Order_Number" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="RecordTypeId" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="Name" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="Invoice_Date" minOccurs="0" type="xsd:string"/>
+                        <xsd:element name="Invoice_Due_Date" minOccurs="0" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:element>
+
+            <xsd:element name="SFBaseoilInvRes">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element minOccurs="0" name="MPLId" type="xsd:string"/>
+                        <xsd:element maxOccurs="unbounded" minOccurs="0" name="returnMessage">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element minOccurs="0" name="errors">
+                                        <xsd:complexType>
+                                            <xsd:sequence>
+                                                <xsd:element minOccurs="0" name="message" type="xsd:string"/>
+                                                <xsd:element minOccurs="0" name="statusCode" type="xsd:string"/>
+                                            </xsd:sequence>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                    <xsd:element name="id">
+                                        <xsd:complexType>
+                                            <xsd:simpleContent>
+                                                <xsd:extension base="xsd:string">
+                                                    <xsd:attribute name="nil" type="xsd:string" use="optional"/>
+                                                </xsd:extension>
+                                            </xsd:simpleContent>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                    <xsd:element minOccurs="0" name="success" type="xsd:string"/>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" name="InvoiceInfoError">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element minOccurs="0" name="InvoiceInfoErrorResponse">
+                                        <xsd:complexType>
+                                            <xsd:sequence>
+                                                <xsd:element name="status" type="xsd:string"/>
+                                                <xsd:element name="message" type="xsd:string"/>
+                                            </xsd:sequence>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+
+        </xsd:schema>
+    </wsdl:types>
+
+    <wsdl:message name="SFBaseoilInvRes">
+        <wsdl:part element="ns1:SFBaseoilInvRes" name="SFBaseoilInvRes"/>
+    </wsdl:message>
+
+    <wsdl:message name="SFBaseoilInvReq">
+        <wsdl:part element="ns1:SFBaseoilInvReq" name="SFBaseoilInvReq"/>
+    </wsdl:message>
+
+    <wsdl:portType name="SendBaseOilInvoiceIntoSF">
+        <wsdl:operation name="invoke">
+            <wsdl:input message="tns:SFBaseoilInvReq" name="SFBaseoilInvReq"/>
+            <wsdl:output message="tns:SFBaseoilInvRes" name="SFBaseoilInvRes"/>
+        </wsdl:operation>
+    </wsdl:portType>
+
+    <wsdl:binding name="DefaultPayloadProviderSEIServiceSoapBinding" type="tns:SendBaseOilInvoiceIntoSF">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="invoke">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="SFBaseoilInvReq"><soap:body use="literal"/></wsdl:input>
+            <wsdl:output name="SFBaseoilInvRes"><soap:body use="literal"/></wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+
+    <wsdl:binding name="DefaultPayloadProviderSEIServiceSoap12Binding" type="tns:SendBaseOilInvoiceIntoSF">
+        <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="invoke">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input name="SFBaseoilInvReq"><soap12:body use="literal"/></wsdl:input>
+            <wsdl:output name="SFBaseoilInvRes"><soap12:body use="literal"/></wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+
+    <wsdl:service name="service">
+        <wsdl:port binding="tns:DefaultPayloadProviderSEIServiceSoap12Binding" name="port12">
+            <soap:address location="https://integrationsuite-dev-1-motiva.it-cpi009-rt.cfapps.us20.hana.ondemand.com/cxf/BaseOilInvoice"/>
+        </wsdl:port>
+        <wsdl:port binding="tns:DefaultPayloadProviderSEIServiceSoapBinding" name="port">
+            <soap:address location="https://integrationsuite-dev-1-motiva.it-cpi009-rt.cfapps.us20.hana.ondemand.com/cxf/BaseOilInvoice"/>
+        </wsdl:port>
+    </wsdl:service>
+
+</wsdl:definitions>

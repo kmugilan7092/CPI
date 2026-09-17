@@ -1,0 +1,25 @@
+#Tue Jan 13 03:48:02 UTC 2026
+loggingAttachmentName=BOInvoicePosting
+Req\ Header=*
+Res\ Header=*
+SAP_Receiver=Salesforce
+Address=/BaseOilInvoice
+WSDL=/wsdl/Baseoil Invoice Sender Structure.wsdl
+SAP_Sender=S4 HANA
+Authorization=RoleBased
+soapFault=//faultstring
+RecordTypeId=0122E000000dDIEQA2
+SoapAction=create
+Content-Type=text/xml
+Timeout=60000
+Method=POST
+payloadData=${in.body}
+LogPayload=No
+WS_Addressing=1
+Type=expression
+InputPayload=${in.body}
+ErrloggingAttachmentName=Exceptionlog
+Authentication=None
+ProxyType=default
+Rev_Address=https\://motiva--uat.sandbox.my.salesforce.com/services/Soap/c/52.0
+ResloggingAttachmentName=BaseOil Response Data

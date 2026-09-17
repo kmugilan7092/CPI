@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+   <xs:element name="create">
+       <xs:complexType>
+           <xs:sequence>
+               <xs:element name="sObjects" minOccurs="1" maxOccurs="unbounded">
+                   <xs:complexType>
+                       <xs:sequence>
+                           <xs:element name="Destination_Location__c" type="xs:string" minOccurs="1"/>
+                           <xs:element name="Hydrocarbon_Amount__c" type="xs:string" minOccurs="1"/>
+                           <xs:element name="Invoice_Amount__c" type="xs:string" minOccurs="1"/>
+                           <xs:element name="Invoice_Number__c" type="xs:string" minOccurs="1"/>
+                           <xs:element name="Order__r" minOccurs="0">
+                               <xs:complexType>
+                                   <xs:sequence>
+                                       <xs:element name="RA_Order_Number__c" type="xs:string" minOccurs="0"/>
+                                   </xs:sequence>
+                               </xs:complexType>
+                           </xs:element>
+                           <xs:element name="PO_Number__c" type="xs:string" minOccurs="0"/>
+                           <xs:element name="RA_Order_ID__c" type="xs:string" minOccurs="1"/>
+                           <xs:element name="RA_Order_Number__c" type="xs:string" minOccurs="1"/>
+                           <xs:element name="RecordTypeId" type="xs:string" minOccurs="1"/>
+                           <xs:element name="Name" type="xs:string" minOccurs="1"/>
+                           <xs:element name="Invoice_Date__c" type="xs:string" minOccurs="1"/>
+                           <xs:element name="Invoice_Due_Date__c" type="xs:string" minOccurs="1"/>
+                       </xs:sequence>
+                   </xs:complexType>
+               </xs:element>
+           </xs:sequence>
+       </xs:complexType>
+   </xs:element>
+</xs:schema>
