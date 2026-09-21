@@ -1,0 +1,17 @@
+#Wed Feb 25 13:00:47 UTC 2026
+SenderAddress=/SendDebtCollAcclist
+Email_Notification(TRUE/FALSE)=TRUE
+Address=/GetSFCredBO
+TimeOut=60000
+SF\ BO\ Address=https\://motiva--uat.sandbox.my.salesforce.com/services/data/v66.0/composite/sobjects/Deal_Detail__c/Name
+Receiver=Salesforce
+Attachement_Size=100
+URL\ TO\ WSDL=/wsdl/SF_SendDebtCollAcclist.wsdl
+Body_Size=40
+Source=S4HANA
+SAP_Target=
+AttachmentsSize=200
+BodySize=200
+RecordTypeId=0122E0000008rqRQAQ
+Error\ Notification=Errorhandling
+LogPayload(Yes/No)=No

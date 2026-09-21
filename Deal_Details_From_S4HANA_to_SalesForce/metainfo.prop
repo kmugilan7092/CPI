@@ -1,0 +1,5 @@
+#Store metainfo properties
+#Mon Sep 21 22:03:15 UTC 2026
+description=Wave7\: This interface upserts Baseoil Deal Details received from SAP S/4HANA in SalesForce.
+source=SAP S4HANA
+target=SalesForce

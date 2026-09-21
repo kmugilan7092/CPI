@@ -1,0 +1,65 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="xs:string" name="allOrNone"/>
+        <xs:element name="records" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="attributes">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="type"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:string" name="Name" minOccurs="0"/>
+              <xs:element type="xs:string" name="Deal_Number__c" minOccurs="0"/>
+              <xs:element type="xs:float" name="Deal_Detail_Number__c" minOccurs="0"/>
+              <xs:element type="xs:string" name="Title_Transfer_Location__c" minOccurs="0"/>
+              <xs:element type="xs:string" name="Deal_Status__c" minOccurs="0"/>
+              <xs:element type="xs:string" name="Contract_Type__c" minOccurs="0"/>
+              <xs:element type="xs:int" name="Sold_To_Number__c" minOccurs="0"/>
+              <xs:element type="xs:int" name="Ship_To_Number__c" minOccurs="0"/>
+              <xs:element type="xs:string" name="Care_of__c" minOccurs="0"/>
+              <xs:element type="xs:string" name="Origin_Location__c" minOccurs="0"/>
+              <xs:element type="xs:string" name="Destination_Location__c" minOccurs="0"/>
+              <xs:element type="xs:string" name="Product__c" minOccurs="0"/>
+              <xs:element type="xs:date" name="Start_Date__c" minOccurs="0"/>
+              <xs:element type="xs:date" name="End_Date__c" minOccurs="0"/>
+              <xs:element type="xs:string" name="Payment_Terms__c" minOccurs="0"/>
+              <xs:element type="xs:string" name="Credit_Type__c" minOccurs="0"/>
+              <xs:element type="xs:string" name="Incoterm__c" minOccurs="0"/>
+              <xs:element type="xs:string" name="Method_of_Transportation__c" minOccurs="0"/>
+              <xs:element type="xs:string" name="Motiva_Sales_Manager__c" minOccurs="0"/>
+              <xs:element type="xs:string" name="Their_Company__c" minOccurs="0"/>
+              <xs:element type="xs:string" name="Region_of_Destination__c" minOccurs="0"/>
+              <xs:element type="xs:string" name="Country_of_Destination__c" minOccurs="0"/>
+              <xs:element name="Customer_Name__r">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:int" name="Sold_To_Number__c" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Ship_To_Account__r">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:int" name="Ship_To_Number__c" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Ultimate_parent__r">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:int" name="Payer_Number__c" minOccurs="0"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

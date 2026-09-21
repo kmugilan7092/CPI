@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://camel.apache.org/cxf/jaxws/provider" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:tns="http://camel.apache.org/cxf/jaxws/provider" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:ns1="http://cxf.component.camel.apache.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+   <wsdl:types>
+       <xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://cxf.component.camel.apache.org/" xmlns="http://cxf.component.camel.apache.org/" xmlns:tns="http://camel.apache.org/cxf/jaxws/provider" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+           <xsd:element name="BoDealDtlsReq">
+               <xsd:complexType>
+                   <xsd:sequence>
+                       <xsd:element maxOccurs="unbounded" name="Detail">
+                           <xsd:complexType>
+                               <xsd:sequence>
+                                   <xsd:element name="DealNumber" type="xsd:string" minOccurs="0"/>
+                                   <xsd:element name="DetailNumber" type="xsd:string" minOccurs="0"/>
+                                   <xsd:element name="TitleTransferLocation" type="xsd:string" minOccurs="0"/>
+                                   <xsd:element name="Status" type="xsd:string" minOccurs="0"/>
+                                   <xsd:element name="DealType" type="xsd:string" minOccurs="0"/>
+                                   <xsd:element name="SoldToNumber" type="xsd:string" minOccurs="0"/>
+                                   <xsd:element name="ShipToNumber" type="xsd:string" minOccurs="0"/>
+                                   <xsd:element name="CareOf" type="xsd:string" minOccurs="0"/>
+                                   <xsd:element name="Origin" type="xsd:string" minOccurs="0"/>
+                                   <xsd:element name="Destination" type="xsd:string" minOccurs="0"/>
+                                   <xsd:element name="Product" type="xsd:string" minOccurs="0"/>
+                                   <xsd:element name="DetailEffectiveFrom" type="xsd:string" minOccurs="0"/>
+                                   <xsd:element name="DetailEffectiveTo" type="xsd:string" minOccurs="0"/>
+                                   <xsd:element name="PaymentTerm" type="xsd:string" minOccurs="0"/>
+                                   <xsd:element name="CreditType" type="xsd:string" minOccurs="0"/>
+                                   <xsd:element name="Incoterm" type="xsd:string" minOccurs="0"/>
+                                   <xsd:element name="Trader" type="xsd:string" minOccurs="0"/>
+                                   <xsd:element name="ModeOfTransport" type="xsd:string" minOccurs="0"/>
+                                   <xsd:element name="Payer" type="xsd:string" minOccurs="0"/>
+                                   <xsd:element name="Counterparty" type="xsd:string" minOccurs="0"/>
+                                   <xsd:element name="RegionOfDestination" type="xsd:string" minOccurs="0"/>
+                                   <xsd:element name="CountryOfDestination" type="xsd:string" minOccurs="0"/>
+                               </xsd:sequence>
+                           </xsd:complexType>
+                       </xsd:element>
+                   </xsd:sequence>
+               </xsd:complexType>
+           </xsd:element>
+           <xsd:element name="BoDealDtlsRes">
+               <xsd:complexType>
+                   <xsd:sequence>
+                       <xsd:element minOccurs="0" name="MPLId" type="xsd:string"/>
+                       <xsd:element maxOccurs="unbounded" minOccurs="0" name="result">
+                           <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element minOccurs="0" name="errors">
+                                        <xsd:complexType>
+                                            <xsd:sequence>
+                                                <xsd:element name="message" type="xsd:string" minOccurs="0"/>
+                                                <xsd:element name="statusCode" type="xsd:string" minOccurs="0"/>
+                                            </xsd:sequence>
+                                        </xsd:complexType>
+                                    </xsd:element>
+                                    <xsd:element name="id" type="xsd:string" minOccurs="0"/>
+                                    <xsd:element name="success" type="xsd:string" minOccurs="0"/>
+                                    <xsd:element name="created" type="xsd:string" minOccurs="0"/>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                       </xsd:element>
+                       <xsd:element minOccurs="0" name="DealDtlsError">
+                           <xsd:complexType>
+                               <xsd:sequence>
+                                   <xsd:element minOccurs="0" name="DealDtlsErrorResponse">
+                                       <xsd:complexType>
+                                           <xsd:sequence>
+                                               <xsd:element name="status" type="xsd:string"/>
+                                               <xsd:element name="message" type="xsd:string"/>
+                                           </xsd:sequence>
+                                       </xsd:complexType>
+                                   </xsd:element>
+                               </xsd:sequence>
+                           </xsd:complexType>
+                       </xsd:element>
+                   </xsd:sequence>
+               </xsd:complexType>
+           </xsd:element>
+       </xsd:schema>
+   </wsdl:types>
+   <wsdl:message name="BoDealDtlsRes">
+       <wsdl:part element="ns1:BoDealDtlsRes" name="BoDealDtlsRes"/>
+   </wsdl:message>
+   <wsdl:message name="BoDealDtlsReq">
+       <wsdl:part element="ns1:BoDealDtlsReq" name="BoDealDtlsReq"/>
+   </wsdl:message>
+   <wsdl:portType name="BoDealDtlsIntoSF">
+       <wsdl:operation name="invoke">
+           <wsdl:input message="tns:BoDealDtlsReq" name="BoDealDtlsReq"/>
+           <wsdl:output message="tns:BoDealDtlsRes" name="BoDealDtlsRes"/>
+       </wsdl:operation>
+   </wsdl:portType>
+   <wsdl:binding name="DefaultPayloadProviderSEIServiceSoapBinding" type="tns:BoDealDtlsIntoSF">
+       <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+       <wsdl:operation name="invoke">
+           <soap:operation soapAction="" style="document"/>
+           <wsdl:input name="BoDealDtlsReq">
+               <soap:body use="literal"/>
+           </wsdl:input>
+           <wsdl:output name="BoDealDtlsRes">
+               <soap:body use="literal"/>
+           </wsdl:output>
+       </wsdl:operation>
+   </wsdl:binding>
+   <wsdl:binding name="DefaultPayloadProviderSEIServiceSoap12Binding" type="tns:BoDealDtlsIntoSF">
+       <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+       <wsdl:operation name="invoke">
+           <soap12:operation soapAction="" style="document"/>
+           <wsdl:input name="BoDealDtlsReq">
+               <soap12:body use="literal"/>
+           </wsdl:input>
+           <wsdl:output name="BoDealDtlsRes">
+               <soap12:body use="literal"/>
+           </wsdl:output>
+       </wsdl:operation>
+   </wsdl:binding>
+   <wsdl:service name="service">
+       <wsdl:port binding="tns:DefaultPayloadProviderSEIServiceSoap12Binding" name="port12">
+           <soap:address location="https://integrationsuite-dev-1-motiva.it-cpi009-rt.cfapps.us20.hana.ondemand.com/cxf/BO/DealDtls"/>
+       </wsdl:port>
+       <wsdl:port binding="tns:DefaultPayloadProviderSEIServiceSoapBinding" name="port">
+           <soap:address location="https://integrationsuite-dev-1-motiva.it-cpi009-rt.cfapps.us20.hana.ondemand.com/cxf/BO/DealDtls"/>
+       </wsdl:port>
+   </wsdl:service>
+</wsdl:definitions>
