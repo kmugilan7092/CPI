@@ -1,0 +1,5 @@
+#Store metainfo properties
+#Thu Nov 05 13:39:10 UTC 2026
+description=Transfers SAP S/4HANA workflow approval details to Microsoft Power Automate to create approval requests in Microsoft Teams.
+source=SAP S4HANA
+target=Microsoft Power Automate (Teams)

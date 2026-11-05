@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><parameters><parameter>
+    <key/>
+    <name>Attachment Size in MB</name>
+    <type>xsd:integer</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
+    <name>Body Size in MB</name>
+    <type>xsd:integer</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
+    <name>SecurityMaterial CPI TENANT</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
+    <name>LogPayload TRUE / FLASE</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
+    <name>ExceptionEmail TRUE / FALSE</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
+    <name>Http MS PA Address</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
+    <name>Http MS PA Query</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
+    <name>Request Headers</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
+    <name>Response Headers</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
+    <name>Sender Soap Address</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
+    <name>CPI Address : Store MS Teams Approval ID</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
+    <name>HTTP Proxy Type</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata>
+      <isCombobox>true</isCombobox>
+    </additionalMetadata>
+  </parameter><parameter>
+    <key/>
+    <name>HTTP Method</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata>
+      <isCombobox>true</isCombobox>
+    </additionalMetadata>
+  </parameter><parameter>
+    <key/>
+    <name>Max Idle Timeout (in ms)</name>
+    <type>xsd:integer</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
+    <name>Timeout (in ms)</name>
+    <type>xsd:integer</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
+    <name>Authentication</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata>
+      <isCombobox>true</isCombobox>
+    </additionalMetadata>
+  </parameter><parameter>
+    <key/>
+    <name>HTTP Credential Name</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
+    <name>HTTP LocationID</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
+    <name>From</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
+    <name>To</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
+    <name>Subject</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
+    <name>Mail Body</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
+    <name>Body Mime-Type</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata>
+      <isCombobox>true</isCombobox>
+    </additionalMetadata>
+  </parameter><parameter>
+    <key/>
+    <name>Body Encoding</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata>
+      <isCombobox>true</isCombobox>
+    </additionalMetadata>
+  </parameter><parameter>
+    <key/>
+    <name>Bcc</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
+    <name>Cc</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
+    <name>Mail Address</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
+    <name>Mail Proxy Type</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata>
+      <isCombobox>true</isCombobox>
+    </additionalMetadata>
+  </parameter><parameter>
+    <key/>
+    <name>Mail Timeout (in ms)</name>
+    <type>xsd:integer</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
+    <name>Protection</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata>
+      <isCombobox>true</isCombobox>
+    </additionalMetadata>
+  </parameter><parameter>
+    <key/>
+    <name>Mail Authentication</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata>
+      <isCombobox>true</isCombobox>
+    </additionalMetadata>
+  </parameter><parameter>
+    <key/>
+    <name>Mail Credential Name</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><parameter>
+    <key/>
+    <name>CPI Address : Receive Action from MS Teams to SAP S4HANA</name>
+    <type>xsd:string</type>
+    <isRequired>false</isRequired>
+    <constraint/>
+    <description/>
+    <additionalMetadata/>
+  </parameter><param_references><reference attribute_category="R_EMAIL" attribute_id="ctype::AdapterVariant/cname::Mail/tp::SMTP/mp::None/direction::Receiver/version::1.13.0/attrId::cc" attribute_uilabel="Cc" param_key="Cc"/><reference attribute_category="R_EMAIL" attribute_id="ctype::AdapterVariant/cname::Mail/tp::SMTP/mp::None/direction::Receiver/version::1.13.0/attrId::server" attribute_uilabel="Address" param_key="Mail Address"/><reference attribute_category="R_EMAIL" attribute_id="ctype::AdapterVariant/cname::Mail/tp::SMTP/mp::None/direction::Receiver/version::1.13.0/attrId::bcc" attribute_uilabel="Bcc" param_key="Bcc"/><reference attribute_category="R_EMAIL" attribute_id="ctype::AdapterVariant/cname::Mail/tp::SMTP/mp::None/direction::Receiver/version::1.13.0/attrId::auth" attribute_uilabel="Authentication" param_key="Mail Authentication"/><reference attribute_category="R_EMAIL" attribute_id="ctype::AdapterVariant/cname::Mail/tp::SMTP/mp::None/direction::Receiver/version::1.13.0/attrId::subject" attribute_uilabel="Subject" param_key="Subject"/><reference attribute_category="R_EMAIL" attribute_id="ctype::AdapterVariant/cname::Mail/tp::SMTP/mp::None/direction::Receiver/version::1.13.0/attrId::content_encoding" attribute_uilabel="Body Encoding" param_key="Body Encoding"/><reference attribute_category="R_EMAIL" attribute_id="ctype::AdapterVariant/cname::Mail/tp::SMTP/mp::None/direction::Receiver/version::1.13.0/attrId::proxyType" attribute_uilabel="Proxy Type" param_key="Mail Proxy Type"/><reference attribute_category="R_EMAIL" attribute_id="ctype::AdapterVariant/cname::Mail/tp::SMTP/mp::None/direction::Receiver/version::1.13.0/attrId::body" attribute_uilabel="Mail Body" param_key="Mail Body"/><reference attribute_category="R_EMAIL" attribute_id="ctype::AdapterVariant/cname::Mail/tp::SMTP/mp::None/direction::Receiver/version::1.13.0/attrId::ssl" attribute_uilabel="Protection" param_key="Protection"/><reference attribute_category="R_EMAIL" attribute_id="ctype::AdapterVariant/cname::Mail/tp::SMTP/mp::None/direction::Receiver/version::1.13.0/attrId::timeout" attribute_uilabel="Timeout (in ms)" param_key="Mail Timeout (in ms)"/><reference attribute_category="R_EMAIL" attribute_id="ctype::AdapterVariant/cname::Mail/tp::SMTP/mp::None/direction::Receiver/version::1.13.0/attrId::content_type" attribute_uilabel="Body Mime-Type" param_key="Body Mime-Type"/><reference attribute_category="R_EMAIL" attribute_id="ctype::AdapterVariant/cname::Mail/tp::SMTP/mp::None/direction::Receiver/version::1.13.0/attrId::from" attribute_uilabel="From" param_key="From"/><reference attribute_category="R_EMAIL" attribute_id="ctype::AdapterVariant/cname::Mail/tp::SMTP/mp::None/direction::Receiver/version::1.13.0/attrId::to" attribute_uilabel="To" param_key="To"/><reference attribute_category="R_EMAIL" attribute_id="ctype::AdapterVariant/cname::Mail/tp::SMTP/mp::None/direction::Receiver/version::1.13.0/attrId::user" attribute_uilabel="Credential Name" param_key="Mail Credential Name"/><reference attribute_category="R_Teams.Receiver.Auth" attribute_id="ctype::AdapterVariant/cname::HTTP/tp::HTTP/mp::None/direction::Receiver/version::1.20.2/attrId::authenticationMethod" attribute_uilabel="Authentication" param_key="Authentication"/><reference attribute_category="R_Teams" attribute_id="ctype::AdapterVariant/cname::HTTP/tp::HTTP/mp::None/direction::Receiver/version::1.20.2/attrId::locationID" attribute_uilabel="Location ID" param_key="HTTP LocationID"/><reference attribute_category="R_Teams" attribute_id="ctype::AdapterVariant/cname::HTTP/tp::HTTP/mp::None/direction::Receiver/version::1.20.2/attrId::proxyType" attribute_uilabel="Proxy Type" param_key="HTTP Proxy Type"/><reference attribute_category="R_Teams" attribute_id="ctype::AdapterVariant/cname::HTTP/tp::HTTP/mp::None/direction::Receiver/version::1.20.2/attrId::pooledConnectionIdleTimeout" attribute_uilabel="Max Idle Timeout (in ms)" param_key="Max Idle Timeout (in ms)"/><reference attribute_category="R_Teams" attribute_id="ctype::AdapterVariant/cname::HTTP/tp::HTTP/mp::None/direction::Receiver/version::1.20.2/attrId::httpAddressQuery" attribute_uilabel="Query" param_key="Http MS PA Query"/><reference attribute_category="R_Teams" attribute_id="ctype::AdapterVariant/cname::HTTP/tp::HTTP/mp::None/direction::Receiver/version::1.20.2/attrId::httpMethod" attribute_uilabel="Method" param_key="HTTP Method"/><reference attribute_category="R_Teams.Receiver.Auth" attribute_id="ctype::AdapterVariant/cname::HTTP/tp::HTTP/mp::None/direction::Receiver/version::1.20.2/attrId::credentialName" attribute_uilabel="Credential Name" param_key="HTTP Credential Name"/><reference attribute_category="R_Teams" attribute_id="ctype::AdapterVariant/cname::HTTP/tp::HTTP/mp::None/direction::Receiver/version::1.20.2/attrId::httpRequestTimeout" attribute_uilabel="Timeout (in ms)" param_key="Timeout (in ms)"/><reference attribute_category="R_Teams" attribute_id="ctype::AdapterVariant/cname::HTTP/tp::HTTP/mp::None/direction::Receiver/version::1.20.2/attrId::allowedResponseHeaders" attribute_uilabel="Response Headers" param_key="Response Headers"/><reference attribute_category="R_Teams" attribute_id="ctype::AdapterVariant/cname::HTTP/tp::HTTP/mp::None/direction::Receiver/version::1.20.2/attrId::allowedRequestHeaders" attribute_uilabel="Request Headers" param_key="Request Headers"/><reference attribute_category="R_Teams" attribute_id="ctype::AdapterVariant/cname::HTTP/tp::HTTP/mp::None/direction::Receiver/version::1.20.2/attrId::httpAddressWithoutQuery" attribute_uilabel="Address" param_key="Http MS PA Address"/><reference attribute_category="S_S4HANA.Receiver.System" attribute_id="ctype::AdapterVariant/cname::SOAP/tp::HTTP/mp::SOAP 1.x/direction::Receiver/version::1.9.0/attrId::address" attribute_uilabel="Address" param_key="Sender Soap Address"/><reference attribute_category="S_S4HANA" attribute_id="ctype::AdapterVariant/cname::SOAP/tp::HTTP/mp::SOAP 1.x/direction::Receiver/version::1.9.0/attrId::maximumBodySize" attribute_uilabel="" param_key="Body Size in MB"/><reference attribute_category="S_S4HANA" attribute_id="ctype::AdapterVariant/cname::SOAP/tp::HTTP/mp::SOAP 1.x/direction::Receiver/version::1.9.0/attrId::maximumAttachmentSize" attribute_uilabel="" param_key="Attachment Size in MB"/></param_references></parameters>

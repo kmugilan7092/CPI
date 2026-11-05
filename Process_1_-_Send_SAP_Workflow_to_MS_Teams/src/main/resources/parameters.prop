@@ -1,0 +1,34 @@
+#Thu Nov 05 13:35:54 UTC 2026
+Attachment\ Size\ in\ MB=500
+Authentication=None
+Bcc=
+Body\ Encoding=UTF-8
+Body\ Mime-Type=text/html
+Body\ Size\ in\ MB=500
+CPI\ Address\ \:\ Receive\ Action\ from\ MS\ Teams\ to\ SAP\ S4HANA=https\://integrationsuite-dev-1-motiva.it-cpi009-rt.cfapps.us20.hana.ondemand.com/http/MSTEAMS/RECEIVER
+CPI\ Address\ \:\ Store\ MS\ Teams\ Approval\ ID=https\://integrationsuite-dev-1-motiva.it-cpi009-rt.cfapps.us20.hana.ondemand.com/http/CancelKeyID
+Cc=
+ExceptionEmail\ TRUE\ /\ FALSE=FALSE
+From=kmuga@rtech.com
+HTTP\ Credential\ Name=
+HTTP\ LocationID=
+HTTP\ Method=POST
+HTTP\ Proxy\ Type=default
+Http\ MS\ PA\ Address=https\://default8d2a2695fb6a41219f5cba2eecf6cb.50.environment.api.powerplatform.com\:443/powerautomate/automations/direct/cu/03/workflows/520dbe46a53442eb92dc83e83e1811f5/triggers/manual/paths/invoke
+Http\ MS\ PA\ Query=api-version\=1&sp\=%2Ftriggers%2Fmanual%2Frun&sv\=1.0&sig\=mtO3DOEss9rqIgJMrUeRN_uFAa4jQPL37GYdVdUJYWg
+LogPayload\ TRUE\ /\ FLASE=TRUE
+Mail\ Address=https/\:cw3qfr
+Mail\ Authentication=loginPlain
+Mail\ Body=${in.body}
+Mail\ Credential\ Name=MS_OAUTH
+Mail\ Proxy\ Type=none
+Mail\ Timeout\ (in\ ms)=30000
+Max\ Idle\ Timeout\ (in\ ms)=300000
+Protection=starttls_mandatory
+Request\ Headers=Content-Type
+Response\ Headers=*
+SecurityMaterial\ CPI\ TENANT=CPI_TENANT_BASIC
+Sender\ Soap\ Address=/SAPTOTEAMS
+Subject=
+Timeout\ (in\ ms)=60000
+To=kmuga@rtech.c
