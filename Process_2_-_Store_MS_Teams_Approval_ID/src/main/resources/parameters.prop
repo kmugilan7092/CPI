@@ -1,0 +1,30 @@
+#Thu Nov 05 13:32:32 UTC 2026
+Dead-Letter\ Queue=0
+Email_Notification(TRUE/FALSE)=FALSE
+Expiration\ Period\ (in\ d)=30
+Exponential\ Backoff=0
+HTTP\ Address=/CancelKeyID
+JMS\ Queue\ Name=MSTEAMSCANCELID
+Mail\ Address=https//
+Mail\ Authentication=loginEncrypted
+Mail\ Bcc=
+Mail\ Body=${in.body}
+Mail\ Body\ Encoding=UTF-8
+Mail\ Body\ Type=text/plain
+Mail\ Cc=
+Mail\ Credential\ Name=MS_OAUTH
+Mail\ From=kmu@kaartech.com
+Mail\ Location\ ID=
+Mail\ Protection=starttls_mandatory
+Mail\ Proxy\ Type=sapcc
+Mail\ Subject=
+Mail\ Timeout\ (in\ ms)=30000
+Mail\ To=kmug@kaartech.com
+Number\ of\ Concurrent\ Processes=5
+Retention\ Threshold\ for\ Alerting\ (in\ d)=2
+Retry\ Interval\ (in\ min)=3
+SOAP\ Address=http\://s4dev.sap.motiva.com\:44310/sap/bc/srt/scs/sap/zsrv_cancelid?sap-client\=120
+SOAP\ Credential\ Name=CN_DM1_S4HANA
+SOAP\ Location\ ID=IS1
+SOAP\ Proxy\ Type=sapcc
+SOAP\ Timeout\ (in\ ms)=60000

@@ -1,0 +1,5 @@
+#Store metainfo properties
+#Thu Nov 05 13:42:07 UTC 2026
+description=Receives and maintains the Teams approval ID against the corresponding SAP workflow work item for tracking and further cancellation processing.
+source=Microsoft Power Automate (Teams)
+target=SAP S4HANA

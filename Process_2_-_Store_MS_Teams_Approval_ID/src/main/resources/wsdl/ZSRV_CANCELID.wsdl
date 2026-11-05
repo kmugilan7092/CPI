@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="urn:sap-com:document:sap:rfc:functions" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:sap-com:document:sap:rfc:functions">
+<wsdl:documentation>
+<sidl:sidl xmlns:sidl="http://www.sap.com/2007/03/sidl"/>
+</wsdl:documentation>
+<wsdl:types>
+<xsd:schema attributeFormDefault="qualified" targetNamespace="urn:sap-com:document:sap:rfc:functions">
+<xsd:simpleType name="char10">
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="10"/>
+</xsd:restriction>
+</xsd:simpleType>
+<xsd:simpleType name="numeric12">
+<xsd:restriction base="xsd:string">
+<xsd:maxLength value="12"/>
+<xsd:pattern value="\d*"/>
+</xsd:restriction>
+</xsd:simpleType>
+<xsd:simpleType name="string">
+<xsd:restriction base="xsd:string"/>
+</xsd:simpleType>
+<xsd:element name="ZFM_CANCELID">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="CANCEL_ID" type="tns:string"/>
+<xsd:element name="WORKITEM_ID" type="tns:numeric12"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+<xsd:element name="ZFM_CANCELIDResponse">
+<xsd:complexType>
+<xsd:sequence>
+<xsd:element name="STATUS" type="tns:char10"/>
+</xsd:sequence>
+</xsd:complexType>
+</xsd:element>
+</xsd:schema>
+</wsdl:types>
+<wsdl:message name="ZFM_CANCELID">
+<wsdl:part element="tns:ZFM_CANCELID" name="parameters"/>
+</wsdl:message>
+<wsdl:message name="ZFM_CANCELIDResponse">
+<wsdl:part element="tns:ZFM_CANCELIDResponse" name="parameter"/>
+</wsdl:message>
+<wsdl:portType name="ZSRV_CANCELID">
+<wsdl:documentation>
+<sapdoc:sapdoc xmlns:sapdoc="urn:sap:esi:documentation">
+<sapdoc:docitem docURL="https://demo.com:44300/sap/bc/esdt/docu/sd_text?sap-client=000&amp;sd_name=ZSRV_CANCELID"/>
+</sapdoc:sapdoc>
+</wsdl:documentation>
+<wsdl:operation name="ZFM_CANCELID">
+<wsdl:input message="tns:ZFM_CANCELID"/>
+<wsdl:output message="tns:ZFM_CANCELIDResponse"/>
+</wsdl:operation>
+</wsdl:portType>
+<wsdl:binding name="binding" type="tns:ZSRV_CANCELID">
+<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+<wsdl:operation name="ZFM_CANCELID">
+<soap:operation soapAction="urn:sap-com:document:sap:rfc:functions:ZSRV_CANCELID:ZFM_CANCELIDRequest" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+</wsdl:binding>
+<wsdl:service name="service">
+<wsdl:port binding="tns:binding" name="binding">
+<soap:address location="http://demo.com:8000/sap/bc/srt/scs/sap/zsrv_cancelid?sap-client=000"/>
+</wsdl:port>
+</wsdl:service>
+</wsdl:definitions>
