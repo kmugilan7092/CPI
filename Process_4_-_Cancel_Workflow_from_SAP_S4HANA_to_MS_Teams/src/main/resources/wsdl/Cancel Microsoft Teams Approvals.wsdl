@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://camel.apache.org/cxf/jaxws/provider"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+    xmlns:tns="http://camel.apache.org/cxf/jaxws/provider"
+    xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+    xmlns:ns1="http://cxf.component.camel.apache.org/"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+    <wsdl:types>
+        <xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+            targetNamespace="http://cxf.component.camel.apache.org/"
+            xmlns="http://cxf.component.camel.apache.org/"
+            xmlns:tns="http://camel.apache.org/cxf/jaxws/provider"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:element name="CancelRequest">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="Records" minOccurs="1" maxOccurs="unbounded">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element name="workItemId" type="xsd:string"/>
+                                    <xsd:element name="CancelKeyID" type="xsd:string" />
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="CancelResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="MPLId" type="xsd:string" />
+                        <xsd:element name="Records" minOccurs="1" maxOccurs="unbounded">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element name="CancelTriggerStatus" type="xsd:string" />
+                                    <xsd:element name="workItemId" type="xsd:string" />
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="CancelRequest">
+        <wsdl:part name="body" element="ns1:CancelRequest"/>
+    </wsdl:message>
+    <wsdl:message name="CancelResponse">
+        <wsdl:part name="body" element="ns1:CancelResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="sendWFCancelToTeams">
+        <wsdl:operation name="invoke">
+            <wsdl:input message="tns:CancelRequest"/>
+            <wsdl:output message="tns:CancelResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="DefaultPayloadProviderSEIServiceSoapBinding" type="tns:sendWFCancelToTeams">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="invoke">
+            <soap:operation soapAction="http://cxf.component.camel.apache.org/invoke" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="DefaultPayloadProviderSEIServiceSoap12Binding" type="tns:sendWFCancelToTeams">
+        <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="invoke">
+            <soap12:operation soapAction="http://cxf.component.camel.apache.org/invoke" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="service">
+        <wsdl:port name="port12" binding="tns:DefaultPayloadProviderSEIServiceSoap12Binding">
+            <soap:address location="https://integrationsuite-dev-it-cpi009-rt.cfapps.us20.hana.ondemand.com/cxf/"/>
+        </wsdl:port>
+        <wsdl:port name="port" binding="tns:DefaultPayloadProviderSEIServiceSoapBinding">
+            <soap:address location="https://integrationsuite-dev-it-cpi009-rt.cfapps.us20.hana.ondemand.com/cxf/"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
