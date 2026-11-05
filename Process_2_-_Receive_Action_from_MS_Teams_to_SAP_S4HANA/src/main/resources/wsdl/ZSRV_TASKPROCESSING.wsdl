@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions targetNamespace="urn:sap-com:document:sap:rfc:functions" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="urn:sap-com:document:sap:rfc:functions">
+    <wsdl:documentation>
+        <sidl:sidl xmlns:sidl="http://www.sap.com/2007/03/sidl"/>
+    </wsdl:documentation>
+    <wsdl:types>
+        <xsd:schema attributeFormDefault="qualified" targetNamespace="urn:sap-com:document:sap:rfc:functions">
+            <xsd:simpleType name="char10">
+                <xsd:restriction base="xsd:string">
+                    <xsd:maxLength value="10"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="char241">
+                <xsd:restriction base="xsd:string">
+                    <xsd:maxLength value="241"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="numeric12">
+                <xsd:restriction base="xsd:string">
+                    <xsd:maxLength value="12"/>
+                    <xsd:pattern value="\d*"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="string">
+                <xsd:restriction base="xsd:string"/>
+            </xsd:simpleType>
+            <xsd:element name="ZODATA_FM">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="IV_APPROVER_EMAIL" type="tns:char241"/>
+                        <xsd:element name="IV_COMMENTS" type="tns:string" minOccurs="0"/>
+                        <xsd:element name="IV_DECISION" type="tns:char10"/>
+                        <xsd:element name="IV_WORKITEMID" type="tns:numeric12"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ZODATA_FMResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="EV_APPROVER_EMAIL" type="tns:char241"/>
+                        <xsd:element name="EV_COMMENTS" type="tns:string"/>
+                        <xsd:element name="EV_DECISION" type="tns:char10"/>
+                        <xsd:element name="EV_DETAILS" type="tns:string"/>
+                        <xsd:element name="EV_MESSAGE" type="tns:string"/>
+                        <xsd:element name="EV_STATUS" type="tns:char10"/>
+                        <xsd:element name="EV_TITLE" type="tns:string"/>
+                        <xsd:element name="EV_WORKITEM_ID" type="tns:numeric12"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="ZODATA_FM">
+        <wsdl:part name="parameters" element="tns:ZODATA_FM"/>
+    </wsdl:message>
+    <wsdl:message name="ZODATA_FMResponse">
+        <wsdl:part name="parameter" element="tns:ZODATA_FMResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="ZSRV_TASKPROCESSING">
+        <wsdl:documentation>
+            <sapdoc:sapdoc xmlns:sapdoc="urn:sap:esi:documentation">
+                <sapdoc:docitem docURL="https://demo.com:44300/sap/bc/esdt/docu/sd_text?sap-client=000&amp;sd_name=ZSRV_TASKPROCESSING"/>
+            </sapdoc:sapdoc>
+        </wsdl:documentation>
+        <wsdl:operation name="ZODATA_FM">
+            <wsdl:input message="tns:ZODATA_FM"/>
+            <wsdl:output message="tns:ZODATA_FMResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="binding" type="tns:ZSRV_TASKPROCESSING">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="ZODATA_FM">
+            <soap:operation soapAction="urn:sap-com:document:sap:rfc:functions:ZSRV_TASKPROCESSING:ZODATA_FMRequest" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="service">
+        <wsdl:port name="binding" binding="tns:binding">
+            <soap:address location="http://demo.com:8000/sap/bc/srt/scs/sap/zsrv_taskprocessing?sap-client=000"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
