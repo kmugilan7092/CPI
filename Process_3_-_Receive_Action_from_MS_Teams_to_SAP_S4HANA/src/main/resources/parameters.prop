@@ -1,0 +1,43 @@
+#
+#Thu Nov 05 13:51:30 UTC 2026
+Dead-Letter\ Queue=0
+Email_Notification(TRUE/FALSE)=FALSE
+Expiration\ Period\ (in\ d)=30
+Exponential\ Backoff=1
+HTTP\ \ PWA=
+HTTP\ Address=/MSTEAMS/RECEIVER
+HTTP\ Address\ PWA=https\://default8d2a2695fb6a41219f5cba2eecf6cb.50.environment.api.powerplatform.com\:443/powerautomate/automations/direct/cu/20/workflows/8ea068744ca440f88f80c5112cf15715/triggers/manual/paths/invoke
+HTTP\ Authentication\ PWA=None
+HTTP\ Credential\ Name=
+HTTP\ Location\ ID\ PWA=
+HTTP\ Method\ PWA=POST
+HTTP\ PWA\ Max\ Idle\ Timeout\ (in\ ms)=300000
+HTTP\ PWA\ Request\ Headers=
+HTTP\ PWA\ Response\ Headers=*
+HTTP\ Proxy\ PWA=default
+HTTP\ Query\ PWA=api-version\=1&sp\=%2Ftriggers%2Fmanual%2Frun&sv\=1.0&sig\=0U_UNAgzIlhXkSAujFEimDsC8-Zo0z23_ucKJdMJMRQ
+HTTP\ Timeout(in\ ms)\ PWA=60000
+JMS\ Queue\ Name=MSTEAMSTOSAP
+Mail\ Address=https//
+Mail\ Authentication=loginEncrypted
+Mail\ Bcc=
+Mail\ Body=${in.body}
+Mail\ Body\ Encoding=UTF-8
+Mail\ Body\ Type=text/html
+Mail\ Cc=
+Mail\ Credential\ Name=MS_OAUTH
+Mail\ From=kmu@kaartech.com
+Mail\ Location\ ID=
+Mail\ Protection=starttls_mandatory
+Mail\ Proxy\ Type=sapcc
+Mail\ Subject=
+Mail\ Timeout\ (in\ ms)=30000
+Mail\ To=kmug@kaartech.com
+Number\ of\ Concurrent\ Processes=5
+Retention\ Threshold\ for\ Alerting\ (in\ d)=2
+Retry\ Interval\ (in\ min)=3
+SOAP\ Address=http\://s4dev.sap.motiva.com\:44310/sap/bc/srt/scs/sap/ZSRV_TASKPROCESSING?sap-client\=120
+SOAP\ Credential\ Name=CN_DM1_S4HANA
+SOAP\ Location\ ID=IS1
+SOAP\ Proxy\ Type=sapcc
+SOAP\ Timeout\ (in\ ms)=60000
