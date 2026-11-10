@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions targetNamespace="urn:sap-com:document:sap:rfc:functions" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="urn:sap-com:document:sap:rfc:functions">
+    <wsdl:documentation>
+        <sidl:sidl xmlns:sidl="http://www.sap.com/2007/03/sidl"/>
+    </wsdl:documentation>
+    <wsdl:types>
+        <xsd:schema attributeFormDefault="qualified" targetNamespace="urn:sap-com:document:sap:rfc:functions">
+            <xsd:simpleType name="char10">
+                <xsd:restriction base="xsd:string">
+                    <xsd:maxLength value="10"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="char241">
+                <xsd:restriction base="xsd:string">
+                    <xsd:maxLength value="241"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="numeric12">
+                <xsd:restriction base="xsd:string">
+                    <xsd:maxLength value="12"/>
+                    <xsd:pattern value="\d*"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="string">
+                <xsd:restriction base="xsd:string"/>
+            </xsd:simpleType>
+            <xsd:element name="ZKT_FM_WF_TEAMS_CANCEL_ID">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="IM_APPROVER_EMAIL" type="tns:string"/>
+                        <xsd:element name="IM_CANCEL_ID" type="tns:string"/>
+                        <xsd:element name="IM_WORKITEM_ID" type="tns:numeric12"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ZKT_FM_WF_TEAMS_CANCEL_IDResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="EX_STATUS" type="tns:char10"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ZKT_FM_WF_TEAMS_DECISION">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="IM_APPROVER_EMAIL" type="tns:char241"/>
+                        <xsd:element name="IM_COMMENTS" type="tns:string" minOccurs="0"/>
+                        <xsd:element name="IM_DECISION" type="tns:char10"/>
+                        <xsd:element name="IM_WORKITEMID" type="tns:numeric12"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ZKT_FM_WF_TEAMS_DECISIONResponse">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="EX_APPROVER_EMAIL" type="tns:char241"/>
+                        <xsd:element name="EX_COMMENTS" type="tns:string"/>
+                        <xsd:element name="EX_DECISION" type="tns:char10"/>
+                        <xsd:element name="EX_DETAILS" type="tns:string"/>
+                        <xsd:element name="EX_MESSAGE" type="tns:string"/>
+                        <xsd:element name="EX_STATUS" type="tns:char10"/>
+                        <xsd:element name="EX_TITLE" type="tns:string"/>
+                        <xsd:element name="EX_WORKITEM_ID" type="tns:numeric12"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="ZKT_FM_WF_TEAMS_CANCEL_ID">
+        <wsdl:part name="parameters" element="tns:ZKT_FM_WF_TEAMS_CANCEL_ID"/>
+    </wsdl:message>
+    <wsdl:message name="ZKT_FM_WF_TEAMS_CANCEL_IDResponse">
+        <wsdl:part name="parameter" element="tns:ZKT_FM_WF_TEAMS_CANCEL_IDResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ZKT_FM_WF_TEAMS_DECISION">
+        <wsdl:part name="parameters" element="tns:ZKT_FM_WF_TEAMS_DECISION"/>
+    </wsdl:message>
+    <wsdl:message name="ZKT_FM_WF_TEAMS_DECISIONResponse">
+        <wsdl:part name="parameter" element="tns:ZKT_FM_WF_TEAMS_DECISIONResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="ZKT_WS_WF_TEAMS_DECISION">
+        <wsdl:documentation>
+            <sapdoc:sapdoc xmlns:sapdoc="urn:sap:esi:documentation">
+                <sapdoc:docitem docURL="https://demo.com:44300/sap/bc/esdt/docu/sd_text?sap-client=000&amp;sd_name=ZKT_WS_WF_TEAMS_DECISION"/>
+            </sapdoc:sapdoc>
+        </wsdl:documentation>
+        <wsdl:operation name="ZKT_FM_WF_TEAMS_CANCEL_ID">
+            <wsdl:input message="tns:ZKT_FM_WF_TEAMS_CANCEL_ID"/>
+            <wsdl:output message="tns:ZKT_FM_WF_TEAMS_CANCEL_IDResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="ZKT_FM_WF_TEAMS_DECISION">
+            <wsdl:input message="tns:ZKT_FM_WF_TEAMS_DECISION"/>
+            <wsdl:output message="tns:ZKT_FM_WF_TEAMS_DECISIONResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="binding" type="tns:ZKT_WS_WF_TEAMS_DECISION">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="ZKT_FM_WF_TEAMS_CANCEL_ID">
+            <soap:operation soapAction="urn:sap-com:document:sap:rfc:functions:ZKT_WS_WF_TEAMS_DECISION:ZKT_FM_WF_TEAMS_CANCEL_IDRequest" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ZKT_FM_WF_TEAMS_DECISION">
+            <soap:operation soapAction="urn:sap-com:document:sap:rfc:functions:ZKT_WS_WF_TEAMS_DECISION:ZKT_FM_WF_TEAMS_DECISIONRequest" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="service">
+        <wsdl:port name="binding" binding="tns:binding">
+            <soap:address location="http://demo.com:8000/sap/bc/srt/scs/sap/zkt_ws_wf_teams_decision?sap-client=000"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
