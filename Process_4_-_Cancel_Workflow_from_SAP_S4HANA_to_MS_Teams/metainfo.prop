@@ -1,5 +1,5 @@
 #Store metainfo properties
-#Thu Nov 05 13:44:04 UTC 2026
+#Tue Nov 10 20:47:37 UTC 2026
 description=Cancels pending Microsoft Teams approvals when the corresponding SAP workflow is completed through SAP My Inbox.
 source=SAP S4HANA
 target=Microsoft Power Automate (Teams)
